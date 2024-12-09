@@ -1,0 +1,123 @@
+/* Car Details Section */
+.car-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: #f5f5f5;
+}
+
+.car-details-container {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Car Image */
+.car-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 0 0 8px;
+}
+
+/* Car Info */
+.car-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.car-price {
+  font-size: 1.5rem;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.car-specs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.car-specs li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Rent Now Button */
+.btn-book-now {
+  align-self: flex-start;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-book-now:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Disabled Button State */
+.btn-book-now:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Tooltip Styling */
+.btn-book-now[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Message Section */
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e63946;
+  background-color: #ffe6e6;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .car-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .car-image img {
+    border-radius: 8px 8px 0 0;
+  }
+}

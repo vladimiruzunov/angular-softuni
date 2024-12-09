@@ -1,0 +1,69 @@
+<section class="manage-cars">
+  <h2>Manage Cars</h2>
+
+  <!-- Tab Navigation -->
+  <div class="tabs">
+    <button [class.active]="selectedTab === 'add'" (click)="switchTab('add')">Add Car</button>
+    <button [class.active]="selectedTab === 'list'" (click)="switchTab('list')">Existing Cars</button>
+    <button [class.active]="selectedTab === 'edit'" (click)="switchTab('edit')" [disabled]="!editMode">
+      Edit Car
+    </button>
+  </div>
+
+  <!-- Add Car Tab -->
+  <div *ngIf="selectedTab === 'add'" class="tab-content">
+    <h3>Add New Car</h3>
+    <form (ngSubmit)="addCar()">
+      <input [(ngModel)]="newCar.brand" name="brand" placeholder="Brand" required />
+      <input [(ngModel)]="newCar.model" name="model" placeholder="Model" required />
+      <input [(ngModel)]="newCar.year" name="year" type="number" placeholder="Year" required />
+      <input [(ngModel)]="newCar.price" name="price" type="number" placeholder="Price" required />
+      <input [(ngModel)]="newCar.color" name="color" placeholder="Color" required />
+      <input [(ngModel)]="newCar.fuelType" name="fuelType" placeholder="Fuel Type" required />
+      <input [(ngModel)]="newCar.img" name="picture" placeholder="Picture URL" required />
+
+      <div *ngIf="newCar.img" class="image-preview">
+        <p>Image Preview:</p>
+        <img [src]="newCar.img" alt="Preview will appear here" />
+      </div>
+      <button type="submit" class="add-btn">Add Car</button>
+    </form>
+  </div>
+
+  <!-- Existing Cars Tab -->
+  <div *ngIf="selectedTab === 'list'" class="tab-content">
+    <h3>Existing Cars</h3>
+    <ul>
+      <li *ngFor="let car of cars">
+      <span class="car-info">
+        {{ car.brand }} {{ car.model }} ({{ car.year }}) - ${{ car.price }}
+      </span>
+        <div class="car-actions">
+          <button (click)="startEdit(car)" class="edit-btn">Edit</button>
+          <button (click)="removeCar(car.id)" class="remove-btn">Remove</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Edit Car Tab -->
+  <div *ngIf="selectedTab === 'edit'" class="tab-content">
+    <h3>Edit Car</h3>
+    <form (ngSubmit)="saveEdit()">
+      <input [(ngModel)]="carToEdit.brand" name="editBrand" placeholder="Brand" required />
+      <input [(ngModel)]="carToEdit.model" name="editModel" placeholder="Model" required />
+      <input [(ngModel)]="carToEdit.year" name="editYear" type="number" placeholder="Year" required />
+      <input [(ngModel)]="carToEdit.price" name="editPrice" type="number" placeholder="Price" required />
+      <input [(ngModel)]="carToEdit.color" name="editColor" placeholder="Color" required />
+      <input [(ngModel)]="carToEdit.fuelType" name="editFuelType" placeholder="Fuel Type" required />
+      <input [(ngModel)]="carToEdit.img" name="editPicture" placeholder="Picture URL" required />
+
+      <div *ngIf="carToEdit.img" class="image-preview">
+        <p>Image Preview:</p>
+        <img [src]="carToEdit.img" alt="Car Image Preview" />
+      </div>
+      <button type="submit" class="save-btn">Save Changes</button>
+      <button type="button" (click)="cancelEdit()" class="cancel-btn">Cancel</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+/* Header Styles */
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Button */
+.logo-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.logo-button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation Links */
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  color: #4caf50; /* Highlight color on hover */
+}
+
+/* Auth Buttons (Login, Register, Logout) */
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem; /* Add spacing between buttons */
+}
+
+.auth-buttons .login-button,
+.auth-buttons .register-button,
+.auth-buttons .logout-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active States */
+.auth-buttons .login-button:hover,
+.auth-buttons .register-button:hover,
+.auth-buttons .logout-button:hover {
+  background-color: #45a049;
+}
+
+.auth-buttons .login-button:active,
+.auth-buttons .register-button:active,
+.auth-buttons .logout-button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .auth-buttons {
+    margin-top: 1rem;
+  }
+}

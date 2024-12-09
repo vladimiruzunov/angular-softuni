@@ -1,0 +1,132 @@
+/* General Styles for the Login Form */
+.login-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-form input {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Labels */
+.login-form label {
+  font-size: 14px;
+  color: #555;
+  margin-left: 5px;
+}
+
+/* Error Messages */
+.error {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
+.error-message {
+  margin-top: 10px;
+  text-align: center;
+  color: #f44336;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Button */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Register Link */
+.login-form p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-form p a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.login-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Loading Class for Button */
+button.loading {
+  background-color: #2196f3;
+  cursor: wait;
+  position: relative;
+}
+
+button.loading::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

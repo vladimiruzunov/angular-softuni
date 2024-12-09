@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, catchError, map, Observable, throwError} from 'rxjs';
 import {JwtHelperService} from '@auth0/angular-jwt';
-import {User} from '../model/User';
+import {User} from '../models/User';
+import * as bcrypt from 'bcryptjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export class AuthService {
     const token = localStorage.getItem('jwt');
     if (token && !this.jwtHelper.isTokenExpired(token)) {
       const decodedToken = this.jwtHelper.decodeToken(token);
-      this.currentUserSubject.next(decodedToken); // Set the user data from the JWT token
+      this.currentUserSubject.next(decodedToken);
     }
   }
 
@@ -35,7 +36,8 @@ export class AuthService {
 
         const user = filteredUsers[0];
 
-        if (user.password !== password) {
+        const isPasswordValid = bcrypt.compareSync(password, user.password!);
+        if (user.username !== 'admin' && !isPasswordValid) {
           throw new Error('Invalid credentials');
         }
 

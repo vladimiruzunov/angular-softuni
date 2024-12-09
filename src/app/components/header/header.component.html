@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+      <button (click)="goHome()" class="logo-button">Rent-A-Car</button>
+    </div>
+    <nav class="nav-menu">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About Us</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/search" routerLinkActive="active">Cars</a>
+      <a routerLink="/manage-cars" *ngIf="isAdmin()" routerLinkActive="active">Manage Cars</a>
+    </nav>
+    <div class="auth-buttons">
+      <ng-container *ngIf="!isLoggedIn(); else loggedIn">
+        <button routerLink="/login" class="login-button">Login</button>
+        <button routerLink="/register" class="register-button">Register</button>
+      </ng-container>
+      <ng-template #loggedIn>
+        <button (click)="logout()" class="logout-button">Logout</button>
+      </ng-template>
+    </div>
+  </div>
+</header>

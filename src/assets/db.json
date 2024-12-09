@@ -15,60 +15,32 @@
       "role": "user"
     },
     {
-      "email": "qkyasd23@gmail.com",
-      "password": "$2a$10$rOYCuwL.ZWfkSeQVtEdPPOTwW5vl9zcixTQmBJaQCuAdO1gvV.x4S",
-      "username": "admin321",
+      "email": "qkyy123@gmail.com",
+      "password": "$2a$10$sHxd5AhqASGZHTvAI9riKOhEAtAQ3IZoeQ.JISsBwA29m9MvEeobe",
+      "username": "v.uzunov",
       "role": "user",
       "id": 3
     },
     {
-      "email": "admin@admin.com",
-      "password": "$2a$10$/ziOvn9jc9ZCrQHJOeM2NOu87M.gAa5tqsvdp9Pom4Gw6qz8ZpOVy",
-      "username": "admin123",
+      "email": "qkyy1233@gmail.com",
+      "password": "$2a$10$b4plid/yJJ2ncp7n64yrD.oF9xZ9gzQpEaRhU8VzEgE4i3SYaZ1SO",
+      "username": "v.uzunov123",
       "role": "user",
       "id": 4
     },
     {
-      "email": "qdasd123@gmail.com",
-      "password": "$2a$10$2rRM5ddr1xhWnwt3T7b9VO5qTeRbw6KJ75yXLLgqOqBfT7oIg52TS",
-      "username": "admindsad",
+      "email": "qkyy12334@gmail.com",
+      "password": "$2a$10$LmiL57BM7Ast/KlvCJuGhe10spif5RvgEE2QSgL2W0A031uzM1D3e",
+      "username": "v.uzunov1234",
       "role": "user",
       "id": 5
     },
     {
-      "email": "qkgggg3@gmail.com",
-      "password": "$2a$10$lPSM4MHlm9QC8g8EoACKfOJIPy0/Kb7QfUIL4y8eM7T6M0n.7AUPK",
-      "username": "vladimiruzunov123",
-      "role": "user",
-      "id": 6
-    },
-    {
-      "email": "qkdasdasd3@gmail.com",
-      "password": "$2a$10$zWBSjbyVs6pE51ULX.8ICO3KScnTcZhAB5oxI/sUKwjR/90HMnxUu",
-      "username": "v.uzunov",
-      "role": "user",
-      "id": 7
-    },
-    {
-      "email": "user@add.sss",
-      "password": "$2a$10$qhyNxjC6InafX28QYUCp3uO28KCihEKV/9enuTrHYSstb17ZsJt/.",
+      "email": "user@dd.com",
+      "password": "$2a$10$gnEkiO8mprN3ea7IDJ5uye1RIcmci5dR3RT8uW.5aHyMga9Jmkuee",
       "username": "user123",
       "role": "user",
-      "id": 8
-    },
-    {
-      "email": "qkyasdasd3@gmail.com",
-      "password": "$2a$10$9AS1KFEz/EO2LLFd2tgd7O9bN752rZiVagswIYeuI1bxzv5iXetC6",
-      "username": "yamasdasd",
-      "role": "user",
-      "id": 9
-    },
-    {
-      "email": "user@dasd.ddd",
-      "password": "$2a$10$zJpex10f38hDXPtY4CuNKOGn9c0kuJozntup6sD2oNTgMYwkubqSC",
-      "username": "user654",
-      "role": "user",
-      "id": 10
+      "id": 6
     }
   ],
   "cars": [
@@ -77,7 +49,7 @@
       "brand": "Toyota",
       "model": "Corolla",
       "year": 2021,
-      "price": 66,
+      "price": 65,
       "fuelType": "Petrol",
       "mileage": 15000,
       "color": "Red",
@@ -99,7 +71,7 @@
       "brand": "Ford",
       "model": "Mustang",
       "year": 2020,
-      "price": 55000,
+      "price": 115,
       "fuelType": "Petrol",
       "mileage": 80,
       "color": "Blue",
@@ -126,6 +98,94 @@
       "mileage": 12000,
       "color": "Gray",
       "img": "assets/images/hyundai_elantra.avif"
+    },
+    {
+      "id": 6,
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2021,
+      "price": 95,
+      "fuelType": "Petrol",
+      "mileage": 10000,
+      "color": "Silver",
+      "img": "assets/images/audi_a4.avif"
+    },
+    {
+      "id": 7,
+      "brand": "Chevrolet",
+      "model": "Camaro",
+      "year": 2020,
+      "price": 110,
+      "fuelType": "Petrol",
+      "mileage": 8000,
+      "color": "Yellow",
+      "img": "assets/images/chevrolet_camaro.jpg"
+    },
+    {
+      "id": 8,
+      "brand": "Mercedes-Benz",
+      "model": "C-Class",
+      "year": 2022,
+      "price": 130,
+      "fuelType": "Diesel",
+      "mileage": 4000,
+      "color": "Black",
+      "img": "assets/images/mercedes_c_class.jpg"
+    },
+    {
+      "id": 9,
+      "brand": "Honda",
+      "model": "Accord",
+      "year": 2021,
+      "price": 75,
+      "fuelType": "Petrol",
+      "mileage": 15000,
+      "color": "Blue",
+      "img": "assets/images/honda_accord.avif"
+    },
+    {
+      "brand": "Renault",
+      "model": "Megane",
+      "year": 2018,
+      "price": 67,
+      "color": "Blue",
+      "fuelType": "Petrol",
+      "img": "https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/gt-fcor.jpg",
+      "id": 10
+    }
+  ],
+  "testimonials": [
+    {
+      "message": "This car rental service made my trip unforgettable! Highly recommend.",
+      "name": "John Doe"
+    },
+    {
+      "message": "Amazing experience. The car was in perfect condition and the service was top-notch.",
+      "name": "Jane Smith"
+    },
+    {
+      "message": "I will definitely use this service again. Excellent customer support.",
+      "name": "Emily Johnson"
+    },
+    {
+      "message": "The best car rental experience I’ve ever had. Easy and reliable.",
+      "name": "Michael Brown"
+    },
+    {
+      "message": "Affordable prices and excellent service. Thank you!",
+      "name": "Sarah Wilson"
+    },
+    {
+      "message": "Fantastic selection of vehicles and smooth booking process. Highly satisfied!",
+      "name": "Chris Taylor"
+    },
+    {
+      "message": "I was impressed by how clean and well-maintained the car was. Great value for money.",
+      "name": "Laura Davis"
+    },
+    {
+      "message": "Quick and hassle-free rental experience. The staff was very friendly and helpful.",
+      "name": "James White"
     }
   ]
 }

@@ -1,0 +1,90 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;  /* Increased padding for spacing */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-right: 2rem;  /* Space between left section and right section */
+}
+
+.inspiring-text {
+  margin-bottom: 1.5rem;  /* Increased margin for better spacing */
+  text-align: left;
+  font-size: 1.1rem;  /* Keep text size consistent */
+  line-height: 1.5;  /* Maintain line height for readability */
+}
+
+.inspiring-text p {
+  margin: 0;
+  white-space: pre-line;  /* Makes sure <br> tags create line breaks */
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #1e90ff;  /* Hover color for social icons */
+}
+
+.contact-info {
+  flex: 1;
+  text-align: right;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-section {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+}

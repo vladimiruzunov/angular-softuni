@@ -1,0 +1,22 @@
+<section class="car-details fancy" *ngIf="car">
+  <div class="car-details-container">
+    <div class="car-image">
+      <img [src]="car.img" [alt]="car.brand + ' ' + car.model" />
+    </div>
+    <div class="car-info">
+      <h2>{{ car.brand }} {{ car.model }}</h2>
+      <p class="car-price"><strong>Price per Day:</strong> ${{ car.price }}</p>
+      <ul class="car-specs">
+        <li><strong>Year:</strong> {{ car.year }}</li>
+        <li><strong>Fuel Type:</strong> {{ car.fuelType }}</li>
+        <li><strong>Mileage:</strong> {{ car.mileage }} km</li>
+        <li><strong>Color:</strong> {{ car.color }}</li>
+      </ul>
+      <button class="btn-book-now" (click)="onBookNow(car.id)">Rent Now</button>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="!car" class="error-message">
+  <p>Car details not available. Please try again later.</p>
+</section>

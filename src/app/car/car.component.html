@@ -1,0 +1,16 @@
+<div class="car-list">
+  <h1>Available Cars</h1>
+  <div class="car-card" *ngFor="let car of cars">
+    <div class="car-image">
+      <img src="{{ car.img }}" alt="{{ car.brand }} {{ car.model }}"/>
+    </div>
+    <div class="car-info">
+      <h2>{{ car.brand }} {{ car.model }}</h2>
+      <p><strong>Year:</strong> {{ car.year }}</p>
+      <p><strong>Price:</strong> ${{ car.price }}</p>
+      <p><strong>Fuel Type:</strong> {{ car.fuelType }}</p>
+      <p><strong>Mileage:</strong> {{ car.mileage }} km</p>
+      <button (click)="viewDetails(car.id)" class="btn-primary">View Details</button>
+    </div>
+  </div>
+</div>

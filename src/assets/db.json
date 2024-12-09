@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "email": "qkyasd23@gmail.com",
+      "password": "$2a$10$rOYCuwL.ZWfkSeQVtEdPPOTwW5vl9zcixTQmBJaQCuAdO1gvV.x4S",
+      "username": "admin321",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$/ziOvn9jc9ZCrQHJOeM2NOu87M.gAa5tqsvdp9Pom4Gw6qz8ZpOVy",
+      "username": "admin123",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "email": "qdasd123@gmail.com",
+      "password": "$2a$10$2rRM5ddr1xhWnwt3T7b9VO5qTeRbw6KJ75yXLLgqOqBfT7oIg52TS",
+      "username": "admindsad",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "email": "qkgggg3@gmail.com",
+      "password": "$2a$10$lPSM4MHlm9QC8g8EoACKfOJIPy0/Kb7QfUIL4y8eM7T6M0n.7AUPK",
+      "username": "vladimiruzunov123",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "email": "qkdasdasd3@gmail.com",
+      "password": "$2a$10$zWBSjbyVs6pE51ULX.8ICO3KScnTcZhAB5oxI/sUKwjR/90HMnxUu",
+      "username": "v.uzunov",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "email": "user@add.sss",
+      "password": "$2a$10$qhyNxjC6InafX28QYUCp3uO28KCihEKV/9enuTrHYSstb17ZsJt/.",
+      "username": "user123",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "email": "qkyasdasd3@gmail.com",
+      "password": "$2a$10$9AS1KFEz/EO2LLFd2tgd7O9bN752rZiVagswIYeuI1bxzv5iXetC6",
+      "username": "yamasdasd",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "email": "user@dasd.ddd",
+      "password": "$2a$10$zJpex10f38hDXPtY4CuNKOGn9c0kuJozntup6sD2oNTgMYwkubqSC",
+      "username": "user654",
+      "role": "user",
+      "id": 10
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "price": 66,
+      "fuelType": "Petrol",
+      "mileage": 15000,
+      "color": "Red",
+      "img": "assets/images/toyota_corolla.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Tesla",
+      "model": "Model S",
+      "year": 2022,
+      "price": 120,
+      "fuelType": "Electric",
+      "mileage": 5000,
+      "color": "Black",
+      "img": "assets/images/tesla_model_s.webp"
+    },
+    {
+      "id": 3,
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2020,
+      "price": 55000,
+      "fuelType": "Petrol",
+      "mileage": 80,
+      "color": "Blue",
+      "img": "assets/images/ford_mustang.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2019,
+      "price": 90,
+      "fuelType": "Diesel",
+      "mileage": 30000,
+      "color": "White",
+      "img": "assets/images/bmw_x5.avif"
+    },
+    {
+      "id": 5,
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2021,
+      "price": 60,
+      "fuelType": "Hybrid",
+      "mileage": 12000,
+      "color": "Gray",
+      "img": "assets/images/hyundai_elantra.avif"
+    }
+  ]
+}

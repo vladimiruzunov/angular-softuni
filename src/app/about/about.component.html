@@ -1,0 +1,18 @@
+<section class="about-section">
+  <div class="container">
+    <h1 class="about-title">About Rent-A-Car</h1>
+    <p class="about-mission">{{ missionStatement }}</p>
+
+    <div class="about-vision">
+      <h2>Our Vision</h2>
+      <p>{{ visionStatement }}</p>
+    </div>
+
+    <div class="about-values">
+      <h2>Our Core Values</h2>
+      <ul>
+        <li *ngFor="let value of values">{{ value }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Drive Your Dream Car Today</h1>
+      <p>Explore a variety of cars available for rent at unbeatable prices.</p>
+      <button (click)="scrollToCars()">Browse Our Cars</button>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section class="featured-cars">
+    <h2>Featured Cars</h2>
+    <div class="car-list">
+      <div class="car-card" *ngFor="let car of featuredCars">
+        <div class="car-image">
+          <img [src]="car.img" alt="{{ car.brand }}" />
+        </div>
+        <div class="car-info">
+          <h3>{{ car.brand }}</h3>
+          <p>{{ car.model }}</p>
+          <button (click)="rentCar(car)" class="rent-button">Rent Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonial Section -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-list">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-content">
+          <p>"{{ testimonial.message }}"</p>
+          <span class="customer-name">- {{ testimonial.name }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

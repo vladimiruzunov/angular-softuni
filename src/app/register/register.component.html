@@ -1,0 +1,88 @@
+<section class="register-form">
+  <h2>Create an Account</h2>
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm" class="form-container">
+    <!-- Username -->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        required
+        #usernameCtrl="ngModel"
+        placeholder="Enter your username"
+      />
+      <div *ngIf="usernameCtrl.invalid && usernameCtrl.touched" class="error">
+        <small *ngIf="usernameCtrl.errors?.['required']">Username is required.</small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        email
+        #emailCtrl="ngModel"
+        placeholder="Enter your email"
+      />
+      <div *ngIf="emailCtrl.invalid && emailCtrl.touched" class="error">
+        <small *ngIf="emailCtrl.errors?.['required']">Email is required.</small>
+        <small *ngIf="emailCtrl.errors?.['email']">Please enter a valid email.</small>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        minlength="6"
+        #passwordCtrl="ngModel"
+        placeholder="Enter a strong password"
+      />
+      <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched" class="error">
+        <small *ngIf="passwordCtrl.errors?.['required']">Password is required.</small>
+        <small *ngIf="passwordCtrl.errors?.['minlength']">Password must be at least 6 characters.</small>
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        id="confirmPassword"
+        type="password"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        required
+        #confirmPasswordCtrl="ngModel"
+        placeholder="Confirm your password"
+      />
+      <div *ngIf="confirmPasswordCtrl.touched" class="error">
+        <small *ngIf="confirmPasswordCtrl.errors?.['required']">Password confirmation is required.</small>
+        <small *ngIf="passwordMismatch">Passwords do not match.</small>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      [disabled]="registerForm.invalid || passwordMismatch || isLoading"
+      [class.loading]="isLoading"
+    >
+      {{ isLoading ? 'Registering...' : 'Register' }}
+    </button>
+  </form>
+
+  <p class="redirect-link">Already have an account? <a routerLink="/login">Login here</a></p>
+</section>

@@ -1,0 +1,37 @@
+<section class="booking-section">
+  <h2>Book Your Car</h2>
+  <div class="car-preview">
+    <img [src]="car?.img" [alt]="car?.brand" class="car-image">
+    <div class="car-details">
+      <h3>{{ car?.brand }} {{ car?.model }} ({{ car?.year }})</h3>
+      <p><strong>Color:</strong> {{ car?.color }}</p>
+      <p><strong>Mileage:</strong> {{ car?.mileage }} km</p>
+      <p><strong>Fuel Type:</strong> {{ car?.fuelType }}</p>
+      <p><strong>Price per Day:</strong> ${{ car?.price }}</p>
+    </div>
+  </div>
+
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input id="startDate" type="date" formControlName="startDate" min="{{ today }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date</label>
+      <input id="endDate" type="date" formControlName="endDate" [min]="bookForm.get('startDate')?.value" />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" placeholder="Your Name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Your Email" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book Now</button>
+  </form>
+</section>

@@ -1,0 +1,41 @@
+<section class="search-page">
+  <h2 class="text-center">Search Cars</h2>
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
+    <div class="form-row">
+      <select formControlName="brand" (change)="onBrandChange(searchForm.value.brand)">
+        <option value="">Select Brand</option>
+        <option *ngFor="let brand of carBrands" [value]="brand">{{ brand }}</option>
+      </select>
+
+      <!-- Car Model Dropdown -->
+      <select formControlName="model">
+        <option value="">Select Model</option>
+        <option *ngFor="let model of carModels" [value]="model">{{ model }}</option>
+      </select>
+      <input formControlName="year" type="number" placeholder="Year" />
+      <input formControlName="mileage" type="number" placeholder="Max Mileage" />
+      <select formControlName="fuelType">
+        <option value="">Select Fuel Type</option>
+        <option *ngFor="let type of fuelTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-search">Search</button>
+      <button type="button" (click)="resetFilters()" class="btn-reset">Reset</button>
+    </div>
+  </form>
+
+  <div class="car-grid">
+    <div class="car-card" *ngFor="let car of filteredCars">
+      <img [src]="car.img" alt="{{ car.brand }} {{ car.model }}" class="car-image" />
+      <div class="car-details">
+        <h4>{{ car.brand }} {{ car.model }}</h4>
+        <p>Year: {{ car.year }}</p>
+        <p>Mileage: {{ car.mileage }} km</p>
+        <p>Fuel Type: {{ car.fuelType }}</p>
+        <p class="price">${{ car.price }}</p>
+        <button (click)="viewDetails(car.id)" class="btn-primary">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>

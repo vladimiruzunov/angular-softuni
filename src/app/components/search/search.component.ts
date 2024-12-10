@@ -53,7 +53,7 @@ export class SearchComponent implements OnInit {
   loadCars(): void {
     this.carService.getAll().subscribe((cars) => {
       this.cars = cars;
-      this.extractBrandsAndModels();  // Extract brands and models from the cars list
+      this.extractBrandsAndModels();
     });
   }
 

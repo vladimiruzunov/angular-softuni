@@ -26,7 +26,6 @@ export class RegisterComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  // Check if passwords match
   get passwordMismatch(): boolean {
     return this.password !== this.confirmPassword;
   }
@@ -47,7 +46,7 @@ export class RegisterComponent {
               next: (loginResponse: User) => {
                 this.isLoading = false;
                 Swal.fire('Success', 'Registration and login successful!', 'success').then(() => {
-                  this.router.navigate(['/']); // Redirect to home after login
+                  this.router.navigate(['/']);
                 });
               },
               error: (err) => {

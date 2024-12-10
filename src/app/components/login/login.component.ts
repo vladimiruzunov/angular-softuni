@@ -28,12 +28,12 @@ export class LoginComponent {
       this.isLoading = true;
       this.authService.login(this.username, this.password).subscribe({
         next: (response) => {
-          this.isLoading = false; // Stop loading on success
-          this.router.navigate(['/home']); // Redirect to home on successful login
+          this.isLoading = false;
+          this.router.navigate(['/home']);
         },
         error: (err) => {
-          this.isLoading = false; // Stop loading on error
-          this.loginError = true; // Show error message
+          this.isLoading = false;
+          this.loginError = true;
           console.error('Login failed', err);
         },
       });

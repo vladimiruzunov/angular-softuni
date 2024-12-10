@@ -18,7 +18,7 @@ export class CarDetailsComponent implements OnInit {
   constructor(private router: Router,
               private route: ActivatedRoute,
               private carService: CarService,
-              private authService : AuthService) {
+              protected authService : AuthService) {
   }
 
   ngOnInit(): void {
@@ -36,10 +36,6 @@ export class CarDetailsComponent implements OnInit {
     } else {
       this.car = null;
     }
-  }
-
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
   }
 
   onBookNow(id : number): void {

@@ -35,7 +35,6 @@ export class ManageCarsComponent {
 
   addCar(): void {
     if (!this.newCar.brand || !this.newCar.model) {
-      // SweetAlert2: Missing required fields
       Swal.fire({
         title: 'Error!',
         text: 'Please provide the car brand and model.',

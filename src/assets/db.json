@@ -8,39 +8,11 @@
       "role": "admin"
     },
     {
-      "id": 2,
+      "email": "user@test.com",
+      "password": "$2a$10$.rZXANjKEIUwTtlegm2ageJ/onl/80JkwlC3vpAtDuajMuY.683su",
       "username": "user",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "email": "qkyy123@gmail.com",
-      "password": "$2a$10$sHxd5AhqASGZHTvAI9riKOhEAtAQ3IZoeQ.JISsBwA29m9MvEeobe",
-      "username": "v.uzunov",
       "role": "user",
-      "id": 3
-    },
-    {
-      "email": "qkyy1233@gmail.com",
-      "password": "$2a$10$b4plid/yJJ2ncp7n64yrD.oF9xZ9gzQpEaRhU8VzEgE4i3SYaZ1SO",
-      "username": "v.uzunov123",
-      "role": "user",
-      "id": 4
-    },
-    {
-      "email": "qkyy12334@gmail.com",
-      "password": "$2a$10$LmiL57BM7Ast/KlvCJuGhe10spif5RvgEE2QSgL2W0A031uzM1D3e",
-      "username": "v.uzunov1234",
-      "role": "user",
-      "id": 5
-    },
-    {
-      "email": "user@dd.com",
-      "password": "$2a$10$gnEkiO8mprN3ea7IDJ5uye1RIcmci5dR3RT8uW.5aHyMga9Jmkuee",
-      "username": "user123",
-      "role": "user",
-      "id": 6
+      "id": 2
     }
   ],
   "cars": [

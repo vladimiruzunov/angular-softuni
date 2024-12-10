@@ -14,9 +14,9 @@
       </ul>
       <button
         class="btn-book-now"
-        [disabled]="!isLoggedIn"
+        [disabled]="!authService.isLoggedIn()"
         (click)="onBookNow(car.id)"
-        [title]="!isLoggedIn ? 'Please log in or register to rent this car.' : ''">
+        [title]="!authService.isLoggedIn() ? 'Please log in or register to rent this car.' : ''">
         Rent Now
       </button>
     </div>
